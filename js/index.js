@@ -5,7 +5,6 @@ window.addEventListener('load',function(){
 		switch(e.code){
 			case 38:
 				rotz-=10;
-				break;
 			case 39:
 				rotx-=10;
 			case 40:
@@ -13,6 +12,7 @@ window.addEventListener('load',function(){
 			case 37:
 				rotx+=10;	
 		}
+		console.log(e.code)
 		st.setAttribute("rotation", {x: rotx, y: 0, z: rotz});
 	});
 });
