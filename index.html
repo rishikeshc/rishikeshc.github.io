@@ -9,9 +9,11 @@
 <a-scene embedded arjs='sourceType: webcam'>
 
 	<a-assets>
-	  <a-asset-item id="burger" src="hamburger/Hamburger.gltf"></a-asset-item>
+	  <a-asset-item id="burger" src="hamburger/Hamburger.gltf" scale="0.2 0.2 0.2"></a-asset-item>
+	  <a-asset-item id="dish" src="dish/Dish.gltf" scale="0.2 0.2 0.2"></a-asset-item>
 	</a-assets>
 	<a-marker preset='hiro'>
+		<a-entity gltf-model="#dish"></a-entity>
 		<a-entity gltf-model="#burger"></a-entity>
 
 	</a-marker>
