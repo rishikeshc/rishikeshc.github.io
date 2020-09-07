@@ -3,13 +3,13 @@ window.addEventListener('load',function(){
 	var st = document.getElementById('ar_st');
 	window.addEventListener('keydown',e=>{
 		switch(e.code){
-			case 38:
+			case "ArrowUp":
 				rotz-=10;
-			case 39:
+			case "ArrowRight":
 				rotx-=10;
-			case 40:
+			case "ArrowDown":
 				rotz+=10;
-			case 37:
+			case "ArrowLeft":
 				rotx+=10;	
 		}
 		console.log(e.code)
