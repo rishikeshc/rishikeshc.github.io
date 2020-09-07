@@ -4,6 +4,7 @@ window.addEventListener('load',function(){
 	window.addEventListener('keydown',e=>{
 		switch(e.code){
 			case "ArrowUp":
+				console.log("CHECK")
 				rotz-=10;
 			case "ArrowRight":
 				rotx-=10;
