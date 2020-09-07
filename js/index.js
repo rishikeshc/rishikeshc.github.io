@@ -1,7 +1,7 @@
 var rotx=0, rotz=0;
 window.addEventListener('load',function(){
 	var st = document.getElementById('ar_st');
-	window.addEventListener('keypress',e=>{
+	window.addEventListener('keydown',e=>{
 		switch(e.code){
 			case 38:
 				rotz-=10;
