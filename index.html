@@ -8,9 +8,11 @@
 <body style='margin : 0px; overflow: hidden;'>
 <a-scene embedded arjs='sourceType: webcam'>
 
+	<a-assets>
+	  <a-asset-item id="burger" src="hamburger/Hamburger.gltf"></a-asset-item>
+	</a-assets>
 	<a-marker preset='hiro'>
-
-		<a-box position='0 1 0' material='opacity: 1; color: #F70087;'></a-box>
+		<a-entity gltf-model="##burger"></a-entity>
 
 	</a-marker>
 
