@@ -7,13 +7,13 @@ window.addEventListener('load',function(){
 				console.log("CHECK")
 				roty-=10;
 			case "ArrowRight":
-				rotx-=10;
+				rotz-=10;
 			case "ArrowDown":
 				roty+=10;
 			case "ArrowLeft":
-				rotx+=10;	
+				rotz+=10;	
 		}
 		console.log(e.code)
-		st.setAttribute("rotation", {x: rotx, y: roty, z: 0});
+		st.setAttribute("rotation", {x: 0, y: roty, z: rotz});
 	});
 });
