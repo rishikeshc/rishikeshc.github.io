@@ -305,9 +305,9 @@
         {
             "doubleSided" : true,
             "emissiveFactor" : [
-                0,
-                0,
-                0
+                0.9258272647857666,
+                0.9258272647857666,
+                0.9258272647857666
             ],
             "name" : "Material.002",
             "pbrMetallicRoughness" : {
@@ -1084,7 +1084,7 @@
     "buffers" : [
         {
             "byteLength" : 12388120,
-            "uri" : "untitled.bin"
+            "uri" : "tm.bin"
         }
     ]
 }
