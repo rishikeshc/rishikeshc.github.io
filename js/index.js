@@ -12,7 +12,7 @@ window.addEventListener('load',function(){
 			case "ArrowDown":
 				roty+=10;
 			case "ArrowLeft":
-				rotx+=10;	
+				rotz+=10;	
 		}
 		st.setAttribute("rotation", {x: rotx, y: roty, z: rotz});
 	});
