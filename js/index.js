@@ -10,11 +10,11 @@ window.addEventListener('load',function(){
 			case "ArrowRight":
 				rotz-=10;
 			case "ArrowDown":
-				roty+=350;
+				roty+=10;
 			case "ArrowLeft":
-				rotz+=350;	
+				rotx+=10;	
 		}
-		st.setAttribute("rotation", {x: 0, y: roty, z: rotz});
+		st.setAttribute("rotation", {x: rotx, y: roty, z: rotz});
 	});
 
 	window.addEventListener('touchstart',e=>{
