@@ -2,7 +2,7 @@ var rotx=0, rotz=0,roty=0;
 var startz=0,endz=0;
 var starty=0,endy=0;
 window.addEventListener('load',function(){
-	var st = document.getElementById('ar_burger');
+	var st = document.getElementById('ar_tm');
 	window.addEventListener('keydown',e=>{
 		switch(e.code){
 			case "ArrowUp":
