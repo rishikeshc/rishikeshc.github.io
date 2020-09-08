@@ -24,8 +24,7 @@ window.addEventListener('load',function(){
 		console.log("TOUCH MOVED");
 		var s = parseInt(e.changedTouches[0].clientX);
 		var mov = s-startx;
-		if(mov<0) rotz+=1
-		else rotz+=(-1);
+		rotz=mov;
 
 		st.setAttribute("rotation", {x: 0, y: roty, z: rotz})
 	})
