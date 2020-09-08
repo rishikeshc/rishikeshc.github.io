@@ -30,7 +30,7 @@ window.addEventListener('load',function(){
 		console.log("TOUCH MOVED");
 		var sz = parseInt(e.changedTouches[0].clientX);
 		var sy = parseInt(e.changedTouches[0].clientY);
-		var movz = startx-sz;
+		var movz = startz-sz;
 		var movy = starty-sy;
 		rotz=endz+movz;
 		roty=endy+movy;
