@@ -1,5 +1,6 @@
 var rotx=0, rotz=0,roty=0;
-var startx=0, curx=0,end=0;
+var startz=0,endz=0;
+var starty=0,endy=0;
 window.addEventListener('load',function(){
 	var st = document.getElementById('ar_burger');
 	window.addEventListener('keydown',e=>{
@@ -18,17 +19,21 @@ window.addEventListener('load',function(){
 
 	window.addEventListener('touchstart',e=>{
 		console.log(e.changedTouches[0]);
-		startx = parseInt(e.changedTouches[0].clientX);
+		startz = parseInt(e.changedTouches[0].clientX);
+		starty = parseInt(e.changedTouches[0].clientY);
 	});
 	window.addEventListener('touchend',e=>{
-		end=parseInt(e.changedTouches[0].clientX);
+		endz=parseInt(e.changedTouches[0].clientX);
+		endy=parseInt(e.changedTouches[0].clientY);
 	})
 	window.addEventListener('touchmove',e=>{
 		console.log("TOUCH MOVED");
-		var s = parseInt(e.changedTouches[0].clientX);
-		var mov = startx-s;
-		rotz=end+mov;
-
+		var sz = parseInt(e.changedTouches[0].clientX);
+		var sy = parseInt(e.changedTouches[0].clientY);
+		var movz = startx-sz;
+		var movy = starty-sy;
+		rotz=endz+movz;
+		roty=endy+movy;
 		st.setAttribute("rotation", {x: 0, y: roty, z: rotz})
 	})
 });
