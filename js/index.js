@@ -5,7 +5,6 @@ window.addEventListener('load',function(){
 	window.addEventListener('keydown',e=>{
 		switch(e.code){
 			case "ArrowUp":
-				console.log("CHECK")
 				roty-=10;
 			case "ArrowRight":
 				rotz-=10;
@@ -25,8 +24,8 @@ window.addEventListener('load',function(){
 		console.log("TOUCH MOVED");
 		var s = parseInt(e.changedTouches[0].clientX);
 		var mov = s-startx;
-
-		rotz+=mov;
+		if(mov<0) rotz+=1
+		else rotz+=(-1);
 
 		st.setAttribute("rotation", {x: 0, y: roty, z: rotz})
 	})
