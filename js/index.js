@@ -34,6 +34,6 @@ window.addEventListener('load',function(){
 		var movy = starty-sy;
 		rotz=endz+movz;
 		roty=endy+movy;
-		st.setAttribute("rotation", {x: 0, y: roty, z: rotz})
+		st.setAttribute("rotation", {x: rotx, y: 0, z: rotz})
 	})
 });
