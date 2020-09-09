@@ -5,15 +5,15 @@ var endx=0;
 function zrotation(a,b){
 	return Math.ceil(Math.sqrt(Math.pow(a,2)+Math.pow(b,2)))
 }
+AFRAME.registerComponent('move_object',{
+	init: function(){
+		this.el.addEventListener('click',evt=>{
+			console.log('Clicked at: ',evt.detail.intersection.point);
+		});
+	}
+});
 window.addEventListener('load',function(){
 	var st = document.getElementById('ar_tm');
-	AFRAME.registerComponent('ar_tm',{
-		init: function(){
-			this.el.addEventListener('click',evt=>{
-				console.log('Clicked at: ',evt.detail.intersection.point);
-			});
-		}
-	})
 	window.addEventListener('keydown',e=>{
 		switch(e.code){
 			case "ArrowUp":
