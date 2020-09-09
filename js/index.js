@@ -1,6 +1,10 @@
 var rotx=0, rotz=0,roty=0;
 var startz=0,endz=0;
 var starty=0,endy=0;
+var endx=0;
+function zrotation(a,b){
+	return Math.ceil(Math.sqrt(Math.pow(a,2)+Math.pow(b,2)))
+}
 window.addEventListener('load',function(){
 	var st = document.getElementById('ar_tm');
 	window.addEventListener('keydown',e=>{
@@ -25,6 +29,7 @@ window.addEventListener('load',function(){
 	window.addEventListener('touchend',e=>{
 		endz=parseInt(e.changedTouches[0].clientX);
 		endy=parseInt(e.changedTouches[0].clientY);
+		endx=zrotation(endz,endy);
 	})
 	window.addEventListener('touchmove',e=>{
 		console.log("TOUCH MOVED");
@@ -32,8 +37,10 @@ window.addEventListener('load',function(){
 		var sy = parseInt(e.changedTouches[0].clientY);
 		var movz = startz-sz;
 		var movy = starty-sy;
+		var movx = zrotation(movz,movy);
 		rotz=endz+movz;
 		roty=endy+movy;
-		st.setAttribute("rotation", {x: 0, y: roty, z: rotz})
+		rotx=endx+movx;
+		st.setAttribute("rotation", {x: rotx, y: roty, z: rotz})
 	})
 });
