@@ -5,7 +5,7 @@
 </head>
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-<!-- <script src="js/index.js"></script> -->
+<script src="js/index.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
 <a-scene embedded arjs='sourceType: webcam'>
 	<a-assets>
@@ -17,11 +17,8 @@
 	<a-marker type='pattern' url='markers/tweetmakers.patt'>
 		<!-- <a-entity gltf-model="#dish" scale="6 6 6" id="ar_dish"></a-entity> -->
 		<!-- <a-entity gltf-model="#burger" scale="0.2 0.2 0.2" id="ar_burger"></a-entity> -->
-		<!-- <a-entity gltf-model="#tm" id="ar_tm" scale="0.4 0.4 0.4" position="0 1 0"></a-entity> -->
+		<a-entity gltf-model="#tm" id="ar_tm" ar_tm scale="0.4 0.4 0.4" position="0 1 0"></a-entity>
 		<!-- <a-entity gltf-model="#stormtrooper" scale="0.02 0.02 0.02" id="ar_st"></a-entity> -->
-    	<a-box position="0 0 0" rotation="0 45 0" color="#4CC3D9"
-           event-set__enter="_event: mouseenter; color: #8FF7FF"
-           event-set__leave="_event: mouseleave; color: #4CC3D9"></a-box>
 	</a-marker>
 
 	<a-entity camera></a-entity>

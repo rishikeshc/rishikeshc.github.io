@@ -7,6 +7,13 @@ function zrotation(a,b){
 }
 window.addEventListener('load',function(){
 	var st = document.getElementById('ar_tm');
+	AFRAME.registerComponent('ar_tm',{
+		init: function(){
+			this.el.addEventListener('click',evt=>{
+				console.log('Clicked at: ',evt.detail.intersection.point);
+			});
+		}
+	})
 	window.addEventListener('keydown',e=>{
 		switch(e.code){
 			case "ArrowUp":
