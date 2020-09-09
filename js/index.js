@@ -5,13 +5,15 @@ var endx=0;
 function zrotation(a,b){
 	return Math.ceil(Math.sqrt(Math.pow(a,2)+Math.pow(b,2)))
 }
-AFRAME.registerComponent('move_object',{
-	init: function(){
-		this.el.addEventListener('click',evt=>{
-			console.log('Clicked at: ',evt.detail.intersection.point);
-		});
-	}
-});
+AFRAME.registerComponent("move_object", {
+  init: function() {
+   this.el.addEventListener("click", (e) => {
+   	alert("Pressed");
+    // let cylinder = document.querySelector("a-cylinder")
+    // cylinder.setAttribute("visible", !cylinder.getAttribute("visible"))
+   })
+  }
+})
 window.addEventListener('load',function(){
 	var st = document.getElementById('ar_tm');
 	window.addEventListener('keydown',e=>{
