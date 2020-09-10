@@ -5,7 +5,17 @@ var endx=0;
 function zrotation(a,b){
 	return Math.ceil(Math.sqrt(Math.pow(a,2)+Math.pow(b,2)))
 }
-
+AFRAME.registerComponent('cursor-listener', {
+  init: function () {
+    var lastIndex = -1;
+    var COLORS = ['red', 'green', 'blue'];
+    this.el.addEventListener('click', function (evt) {
+      lastIndex = (lastIndex + 1) % COLORS.length;
+      this.setAttribute('material', 'color', COLORS[lastIndex]);
+      console.log('I was clicked at: ', evt.detail.intersection.point);
+    });
+  }
+});
 window.addEventListener('load',function(){
 	var st = document.getElementById('ar_tm');
 	window.addEventListener('keydown',e=>{
