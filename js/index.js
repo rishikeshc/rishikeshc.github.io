@@ -15,10 +15,11 @@ function switchAsset(i){
 	if(index+i >= assets.length) newIndex = 0;
 	else if(index+i < 0) newIndex=assets.length-1;
 	else newIndex = index+i
-
-	var newAsset = document.getElementById(assets[newIndex]);
-	oldAsset.setAttribute("visible","true");
+	var f = assets[newIndex];
+	var newAsset = document.getElementById(f);
+	oldAsset.setAttribute("visible","false");
 	newAsset.setAttribute("visible","true");
+	curAsset = f;
 }
 window.addEventListener('load',function(){
 	var st = document.getElementById('ar_tm');
