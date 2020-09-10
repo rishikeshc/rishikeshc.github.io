@@ -5,7 +5,7 @@ var endx=0;
 function zrotation(a,b){
 	return Math.ceil(Math.sqrt(Math.pow(a,2)+Math.pow(b,2)))
 }
-AFRAME.registerComponent('cursor-listener', {
+AFRAME.registerComponent('googoo', {
   init: function () {
     var lastIndex = -1;
     var COLORS = ['red', 'green', 'blue'];
