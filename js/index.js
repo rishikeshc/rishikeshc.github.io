@@ -22,13 +22,11 @@ function switchAsset(i){
 	curAsset = f;
 }
 window.addEventListener('load',function(){
-	var st = document.getElementById('ar_tm');
 	curAsset="ar_tm";
 	AFRAME.registerComponent('right', {
 	  init: function () {
 	    this.el.addEventListener('click', function (evt) {
 	      	switchAsset(1);
-	      	st=curAsset;
 	    });
 	  }
 	});
@@ -36,10 +34,10 @@ window.addEventListener('load',function(){
 	  init: function () {
 	    this.el.addEventListener('click', function (evt) {
 	      	switchAsset(-1);
-	      	st=curAsset;
 	    });
 	  }
 	});
+	var st = document.getElementById(curAsset);
 
 	window.addEventListener('keydown',e=>{
 		switch(e.code){
