@@ -5,19 +5,31 @@ var endx=0;
 function zrotation(a,b){
 	return Math.ceil(Math.sqrt(Math.pow(a,2)+Math.pow(b,2)))
 }
-AFRAME.registerComponent('googoo', {
-  init: function () {
-    var lastIndex = -1;
-    var COLORS = ['red', 'green', 'blue'];
-    this.el.addEventListener('click', function (evt) {
-      lastIndex = (lastIndex + 1) % COLORS.length;
-      this.setAttribute('material', 'color', COLORS[lastIndex]);
-      console.log('I was clicked at: ', evt.detail.intersection.point);
-    });
-  }
-});
 window.addEventListener('load',function(){
 	var st = document.getElementById('ar_tm');
+
+	AFRAME.registerComponent('tmlogo', {
+	  init: function () {
+	    this.el.addEventListener('click', function (evt) {
+	      console.log('I was clicked at: ', evt.detail.intersection.point);
+	      var bg = document.getElementById("ar_burger");
+	      bg.setAttribute("visible","true");
+	      this.setAttribute("visible","false");
+	      st=bg;
+	    });
+	  }
+	});
+	AFRAME.registerComponent('burger', {
+	  init: function () {
+	    this.el.addEventListener('click', function (evt) {
+	      console.log('I was clicked at: ', evt.detail.intersection.point);
+	      var bg = document.getElementById("ar_tm");
+	      bg.setAttribute("visible","true");
+	      this.setAttribute("visible","false");
+	      st=bg;
+	    });
+	  }
+	});
 	window.addEventListener('keydown',e=>{
 		switch(e.code){
 			case "ArrowUp":

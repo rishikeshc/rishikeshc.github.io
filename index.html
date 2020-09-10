@@ -16,17 +16,17 @@
 	</a-assets>
 	<a-marker type='pattern' url='markers/tweetmakers.patt'>
 		<!-- <a-entity gltf-model="#dish" scale="6 6 6" id="ar_dish"></a-entity> -->
-		<!-- <a-entity gltf-model="#burger" scale="0.2 0.2 0.2" id="ar_burger"></a-entity> -->
+		<a-entity burger gltf-model="#burger" scale="0.2 0.2 0.2" id="ar_burger" visible="false"></a-entity>
 		
-		<a-entity googoo gltf-model="#tm" id="ar_tm" scale="0.4 0.4 0.4" position="0 1 0"></a-entity>
+		<a-entity tmlogo gltf-model="#tm" id="ar_tm" scale="0.4 0.4 0.4" position="0 1 0"></a-entity>
 		<!-- <a-entity gltf-model="#stormtrooper" scale="0.02 0.02 0.02" id="ar_st"></a-entity> -->
 	</a-marker>
 
 	<a-entity camera>
 		<a-entity cursor="fuse: true; fuseTimeout: 500"
             position="0 0 -1"
-            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-            material="color: black; shader: flat">
+            geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.01"
+            material="color: red; shader: flat">
   		</a-entity>
 	</a-entity>
 
