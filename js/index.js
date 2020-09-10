@@ -2,34 +2,44 @@ var rotx=0, rotz=0,roty=0;
 var startz=0,endz=0;
 var starty=0,endy=0;
 var endx=0;
+var curAsset="";
 function zrotation(a,b){
 	return Math.ceil(Math.sqrt(Math.pow(a,2)+Math.pow(b,2)))
 }
+function switchAsset(i){
+	var assets = ["ar_tm","ar_dish","ar_burger","ar_st"]
+	var oldAsset = document.getElementById(curAsset);
+	var index = assets.indexOf(curAsset);
+	var newIndex = 0
+	
+	if(index+i >= assets.length) newIndex = 0;
+	else if(index+i < 0) newIndex=assets.length-1;
+	else newIndex = index+i
+
+	var newAsset = document.getElementById(assets[newIndex]);
+	oldAsset.setAttribute("visible","true");
+	newAsset.setAttribute("visible","true");
+}
 window.addEventListener('load',function(){
 	var st = document.getElementById('ar_tm');
+	curAsset="ar_tm";
+	AFRAME.registerComponent('right', {
+	  init: function () {
+	    this.el.addEventListener('click', function (evt) {
+	      	switchAsset(1);
+	      	st=curAsset;
+	    });
+	  }
+	});
+	AFRAME.registerComponent('left', {
+	  init: function () {
+	    this.el.addEventListener('click', function (evt) {
+	      	switchAsset(-1);
+	      	st=curAsset;
+	    });
+	  }
+	});
 
-	AFRAME.registerComponent('tmlogo', {
-	  init: function () {
-	    this.el.addEventListener('click', function (evt) {
-	      console.log('I was clicked at: ', evt.detail.intersection.point);
-	      var bg = document.getElementById("ar_burger");
-	      bg.setAttribute("visible","true");
-	      this.setAttribute("visible","false");
-	      st=bg;
-	    });
-	  }
-	});
-	AFRAME.registerComponent('burger', {
-	  init: function () {
-	    this.el.addEventListener('click', function (evt) {
-	      console.log('I was clicked at: ', evt.detail.intersection.point);
-	      var bg = document.getElementById("ar_tm");
-	      bg.setAttribute("visible","true");
-	      this.setAttribute("visible","false");
-	      st=bg;
-	    });
-	  }
-	});
 	window.addEventListener('keydown',e=>{
 		switch(e.code){
 			case "ArrowUp":
