@@ -31,14 +31,14 @@ window.addEventListener('load',function(){
 	    });
 	  }
 	});
-	AFRAME.registerComponent('left', {
-	  init: function () {
-	    this.el.addEventListener('click', function (evt) {
-	      	switchAsset(-1);
-	      	st=curAsset;
-	    });
-	  }
-	});
+	// AFRAME.registerComponent('left', {
+	//   init: function () {
+	//     this.el.addEventListener('click', function (evt) {
+	//       	switchAsset(-1);
+	//       	st=curAsset;
+	//     });
+	//   }
+	// });
 
 	window.addEventListener('keydown',e=>{
 		switch(e.code){
