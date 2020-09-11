@@ -1,3 +1,6 @@
+import 'aframe';
+import 'aframe-mouse-cursor-component';
+
 var rotx=0, rotz=0,roty=0;
 var startz=0,endz=0;
 var starty=0,endy=0;
