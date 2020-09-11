@@ -16,7 +16,7 @@
 	  <a-asset-item id="stormtrooper" src="stormtrooper/model_Stormtrooper_20171214_154554283.gltf"></a-asset-item>
 	</a-assets>
 	<a-marker type='pattern' url='markers/tweetmakers.patt'>
-		<a-entity right gltf-model="#arrow" scale="1.5 1.5 1.5"></a-entity>
+		<a-entity right gltf-model="#arrow" scale="1.5 1.5 1.5" class="clickable"></a-entity>
 		<a-entity left gltf-model="#arrow"  scale="1.5 1.5 1.5" rotation="0 180 0"></a-entity>
 		<a-entity gltf-model="#dish" scale="6 6 6" id="ar_dish" visible="false"></a-entity>
 		<a-entity burger gltf-model="#burger" scale="0.2 0.2 0.2" id="ar_burger" visible="false"></a-entity>
@@ -26,11 +26,11 @@
 	</a-marker>
 
 	<a-entity camera>
-		<a-entity cursor="fuse: true; fuseTimeout: 500"
+		<!-- <a-entity cursor="fuse: true; fuseTimeout: 500"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02"
             material="color: red; shader: flat">
-  		</a-entity>
+  		</a-entity> -->
 	</a-entity>
 
 </a-scene>

@@ -26,6 +26,7 @@ window.addEventListener('load',function(){
 	AFRAME.registerComponent('right', {
 	  init: function () {
 	    this.el.addEventListener('click', function (evt) {
+	    	console.log("THIS GOT CLICKED")
 	      	switchAsset(1);
 	    });
 	  }
