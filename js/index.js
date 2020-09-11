@@ -25,7 +25,7 @@ window.addEventListener('load',function(){
 	curAsset="ar_tm";
 	AFRAME.registerComponent('right', {
 	  init: function () {
-	    this.el.addEventListener('click', function (evt) {
+	    this.el.addEventListener('mousedown', function (evt) {
 	    	console.log("THIS GOT CLICKED")
 	      	switchAsset(1);
 	    });
@@ -33,7 +33,7 @@ window.addEventListener('load',function(){
 	});
 	AFRAME.registerComponent('left', {
 	  init: function () {
-	    this.el.addEventListener('click', function (evt) {
+	    this.el.addEventListener('mousedown', function (evt) {
 	      	switchAsset(-1);
 	    });
 	  }
