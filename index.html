@@ -7,7 +7,7 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 <script src="js/index.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
-<a-scene embedded arjs='sourceType: webcam'>
+<a-scene embedded arjs='sourceType: webcam' cursor="rayOrigin: mouse">
 	<a-assets>
 	  <a-asset-item id="burger" src="hamburger/Hamburger.gltf" ></a-asset-item>
 	  <a-asset-item id="dish" src="dish/Dish.gltf"></a-asset-item>
@@ -28,7 +28,7 @@
 	<a-entity camera>
 		<a-entity cursor="fuse: true; fuseTimeout: 500"
             position="0 0 -1"
-            geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02"
+            geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.05"
             material="color: red; shader: flat">
   		</a-entity>
 	</a-entity>
