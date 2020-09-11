@@ -30,8 +30,8 @@ window.addEventListener('load',function(){
 		endx=parseInt(e.changedTouches[0].clientX);
 		var l = startx-endx;
 		var k=0
-		if(l< -10) k=1;
-		else if(l>10) k=-1;
+		if(l< -100) k=-1;
+		else if(l>100) k=1;
 		switchAsset(k);
 	})
 });
