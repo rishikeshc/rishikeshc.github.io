@@ -31,7 +31,7 @@ window.addEventListener('load',function(){
 	var txt = document.getElementById("ar_text");
 	var st = document.getElementById(curAsset);
 	// txt.setAttribute("text",{value: texts[curAsset], height: 50});
-	txt.setAttribute("text",texts[curAsset]);
+	txt.setAttribute("value",texts[curAsset]);
 	window.addEventListener('touchstart',e=>{
 		startx = parseInt(e.changedTouches[0].clientX);
 	});
