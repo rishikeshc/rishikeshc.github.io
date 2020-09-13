@@ -20,7 +20,8 @@ function switchAsset(i){
 	else newIndex = index+i
 	var f = assets[newIndex];
 	var newAsset = document.getElementById(f);
-	txt.setAttribute("text","value: texts[f];");
+	txt.setAttribute("text",{value: texts[f], height: 50});
+	console.log(texts[f])
 	oldAsset.setAttribute("visible","false");
 	newAsset.setAttribute("visible","true");
 	curAsset = f;
