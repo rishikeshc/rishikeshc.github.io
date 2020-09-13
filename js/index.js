@@ -21,16 +21,16 @@ function switchAsset(i){
 	var f = assets[newIndex];
 	var newAsset = document.getElementById(f);
 	txt.setAttribute("text",{value: texts[f], height: 50});
-	console.log(texts[f])
+	console.log("TEXXXTTTT",texts[f])
 	oldAsset.setAttribute("visible","false");
 	newAsset.setAttribute("visible","true");
 	curAsset = f;
 }
 window.addEventListener('load',function(){
 	curAsset="ar_tm";
-
+	var txt = document.getElementById("ar_text");
 	var st = document.getElementById(curAsset);
-
+	txt.setAttribute("text",{value: texts[curAsset], height: 50});
 	window.addEventListener('touchstart',e=>{
 		startx = parseInt(e.changedTouches[0].clientX);
 	});
