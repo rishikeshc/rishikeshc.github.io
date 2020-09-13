@@ -20,8 +20,8 @@ function switchAsset(i){
 	else newIndex = index+i
 	var f = assets[newIndex];
 	var newAsset = document.getElementById(f);
-	txt.setAttribute("text",{value: texts[f], height: 50});
-	console.log("TEXXXTTTT",texts[f])
+	// txt.setAttribute("text",{value: texts[f], height: 50});
+	txt.setAttribute("value",texts[f]);
 	oldAsset.setAttribute("visible","false");
 	newAsset.setAttribute("visible","true");
 	curAsset = f;
@@ -30,7 +30,8 @@ window.addEventListener('load',function(){
 	curAsset="ar_tm";
 	var txt = document.getElementById("ar_text");
 	var st = document.getElementById(curAsset);
-	txt.setAttribute("text",{value: texts[curAsset], height: 50});
+	// txt.setAttribute("text",{value: texts[curAsset], height: 50});
+	txt.setAttribute("text",texts[curAsset]);
 	window.addEventListener('touchstart',e=>{
 		startx = parseInt(e.changedTouches[0].clientX);
 	});
