@@ -18,6 +18,7 @@ const texts = {
 	"ar_st": "Worst shooters of the galaxy"
 }
 function onConnect(){
+	console.log("Check");
 	alert("Connected");
 }
 function sendMqtt(i){
