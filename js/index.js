@@ -6,7 +6,7 @@ var mqtt;
 var options={
 	timeout: 3,
 	username: 'cU2i1Hg322xAuHEi9VEfCJaTBlwbFxBFhuM71S0RLlh3QMbQvDVXcUED30Czm42t',
-	password: ''
+	password: '',
 	onSuccess: onConnect
 }
 // mqtt.connect(options);
