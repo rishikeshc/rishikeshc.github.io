@@ -1,12 +1,12 @@
 var startx,endx = 0
 var curAsset="";
-var host="broker.emqx.io";
-var port = 8084;
+var host="mqtt.flespi.io";
+var port = 8883;
 var mqtt;
 var options={
 	timeout: 3,
-	// userName: 'cU2i1Hg322xAuHEi9VEfCJaTBlwbFxBFhuM71S0RLlh3QMbQvDVXcUED30Czm42t',
-	// password: '',
+	userName: 'crVbGFh3h1aKq7O0cS3AueV6ERfzLndNDWN9pU2uJ25ZXJPXpGoHL7DfMJCnWF0n',
+	password: '',
 	useSSL:true,
 	onSuccess: onConnect
 }
@@ -48,6 +48,7 @@ function switchAsset(i){
 	oldAsset.setAttribute("visible","false");
 	newAsset.setAttribute("visible","true");
 	curAsset = f;
+	alert(newIndex);
 	sendMqtt(newIndex);
 }
 window.addEventListener('load',function(){
