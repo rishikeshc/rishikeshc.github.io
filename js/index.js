@@ -27,7 +27,7 @@ function onConnect(){
 function sendMqtt(i){
 	var msg = new Paho.MQTT.Message(`${i}`)
 	msg.destinationName = topic;
-	mqtt.send(msg.toString());
+	mqtt.send(msg);
 	alert("Sent: ",i)
 }
 function zrotation(a,b){
@@ -51,17 +51,9 @@ function switchAsset(i){
 	curAsset = f;
 	sendMqtt(newIndex);
 }
-async function mConnect(){
-	await mqtt.connect(options)
-}
-window.addEventListener('load',function(){
-	mqtt=new Paho.MQTT.Client(host,port,"clientjs");
-	mConnect().then(()=>{
-		var msg = new Paho.MQTT.Message(`Check`)
-		msg.destinationName = "AR/iot";
-		mqtt.send(msg);
 
-	})
+window.addEventListener('load',function(){
+	mqtt.connect(options)
 	curAsset="ar_tm";
 	var txt = document.getElementById("ar_text");
 	var st = document.getElementById(curAsset);
@@ -79,3 +71,8 @@ window.addEventListener('load',function(){
 		switchAsset(k);
 	})
 });
+window.addEventListener('click',function(){
+	var msg = new Paho.MQTT.Message("Hello World")
+	msg.destinationName = "AR/iot";
+	mqtt.send(msg);
+})
