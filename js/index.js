@@ -53,6 +53,7 @@ function switchAsset(i){
 }
 
 window.addEventListener('load',function(){
+	mqtt=new Paho.MQTT.Client(host,port,"clientjs");
 	mqtt.connect(options)
 	curAsset="ar_tm";
 	var txt = document.getElementById("ar_text");
