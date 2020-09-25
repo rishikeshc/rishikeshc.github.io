@@ -52,15 +52,15 @@ function switchAsset(i){
 	sendMqtt(newIndex);
 }
 async function mConnect(){
-	mqtt.connect(options)
+	await mqtt.connect(options)
 }
 window.addEventListener('load',function(){
 	mqtt=new Paho.MQTT.Client(host,port,"clientjs");
-	await mConnect().then(()=>{
+	mConnect().then(()=>{
 		var msg = new Paho.MQTT.Message(`Check`)
 		msg.destinationName = "AR/iot";
 		mqtt.send(msg);
-		
+
 	})
 	curAsset="ar_tm";
 	var txt = document.getElementById("ar_text");
