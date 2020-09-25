@@ -7,7 +7,7 @@ var options={
 	timeout: 3,
 	onSuccess: onConnect
 }
-mqtt.connect(options);
+// mqtt.connect(options);
 var topic="AR/iot";
 
 
