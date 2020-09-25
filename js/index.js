@@ -5,7 +5,7 @@ var port = 8883;
 var mqtt;
 var options={
 	timeout: 3,
-	userName: 'crVbGFh3h1aKq7O0cS3AueV6ERfzLndNDWN9pU2uJ25ZXJPXpGoHL7DfMJCnWF0n',
+	userName: 'ef20jpVzcETktD5a4CKw1QUo2yatUqHXuxLBKw0NYHVh8Rg3hQp6u7lmulEezbZR',
 	password: '',
 	useSSL:true,
 	onSuccess: onConnect
