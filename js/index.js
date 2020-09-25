@@ -1,7 +1,7 @@
 var startx,endx = 0
 var curAsset="";
-var host="broker.emqx.io";
-var port = 8084;
+var host="mqtt.flespi.io";
+var port = 443;
 var mqtt;
 var options={
 	timeout: 3,
