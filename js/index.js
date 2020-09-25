@@ -1,12 +1,12 @@
 var startx,endx = 0
 var curAsset="";
-var host="mqtt.flespi.io";
-var port = 443;
+var host="broker.emqx.io";
+var port = 8084;
 var mqtt;
 var options={
 	timeout: 3,
-	userName: 'cU2i1Hg322xAuHEi9VEfCJaTBlwbFxBFhuM71S0RLlh3QMbQvDVXcUED30Czm42t',
-	password: '',
+	// userName: 'cU2i1Hg322xAuHEi9VEfCJaTBlwbFxBFhuM71S0RLlh3QMbQvDVXcUED30Czm42t',
+	// password: '',
 	useSSL:true,
 	onSuccess: onConnect
 }
