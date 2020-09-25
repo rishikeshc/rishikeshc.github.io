@@ -27,7 +27,8 @@ function onConnect(){
 function sendMqtt(i){
 	var msg = new Paho.MQTT.Message(`${i}`)
 	msg.destinationName = topic;
-	mqtt.send(msg);
+	mqtt.send(msg.toString());
+	alert("Sent: ",i)
 }
 function zrotation(a,b){
 	return Math.ceil(Math.sqrt(Math.pow(a,2)+Math.pow(b,2)))
@@ -48,7 +49,6 @@ function switchAsset(i){
 	oldAsset.setAttribute("visible","false");
 	newAsset.setAttribute("visible","true");
 	curAsset = f;
-	alert(newIndex);
 	sendMqtt(newIndex);
 }
 window.addEventListener('load',function(){
