@@ -1,7 +1,7 @@
 var startx,endx = 0
 var curAsset="";
-var host="mqtt.eclipse.org";
-var port = 1883;
+var host="broker.emqx.io";
+var port = 8883;
 var mqtt;
 var options={
 	timeout: 3,
