@@ -1,6 +1,6 @@
 var startx,endx = 0
 var curAsset="";
-var host="wss://broker.emqx.io";
+var host="broker.emqx.io";
 var port = 8084;
 var mqtt;
 var options={
