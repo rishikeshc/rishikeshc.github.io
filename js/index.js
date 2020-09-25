@@ -5,7 +5,7 @@ var port = 443;
 var mqtt;
 var options={
 	timeout: 3,
-	username: 'cU2i1Hg322xAuHEi9VEfCJaTBlwbFxBFhuM71S0RLlh3QMbQvDVXcUED30Czm42t',
+	userName: 'cU2i1Hg322xAuHEi9VEfCJaTBlwbFxBFhuM71S0RLlh3QMbQvDVXcUED30Czm42t',
 	password: '',
 	onSuccess: onConnect
 }
