@@ -1,10 +1,29 @@
 var startx,endx = 0
 var curAsset="";
+var host="mqtt.eclipse.org";
+var port = 1883;
+var mqtt=new Paho.MQTT.Client(host,port,"clientjs");
+var options={
+	timeout: 3,
+	onSuccess: onConnect
+}
+mqtt.connect(options);
+var topic="AR/iot";
+
+
 const texts = {
 	"ar_tm": "The TweetMakers Logo",
 	"ar_dish": "A white little dish",
 	"ar_burger": "Finest burger in the virtual realm",
 	"ar_st": "Worst shooters of the galaxy"
+}
+function onConnect(){
+	alert("Connected");
+}
+function sendMqtt(i){
+	var msg = new Paho.MQTT.Message(`${i}`)
+	msg.destinationName = topic;
+	mqtt.send(msg);
 }
 function zrotation(a,b){
 	return Math.ceil(Math.sqrt(Math.pow(a,2)+Math.pow(b,2)))
@@ -25,6 +44,7 @@ function switchAsset(i){
 	oldAsset.setAttribute("visible","false");
 	newAsset.setAttribute("visible","true");
 	curAsset = f;
+	sendMqtt(newIndex);
 }
 window.addEventListener('load',function(){
 	curAsset="ar_tm";
