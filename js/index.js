@@ -7,6 +7,7 @@ var options={
 	timeout: 3,
 	userName: 'cU2i1Hg322xAuHEi9VEfCJaTBlwbFxBFhuM71S0RLlh3QMbQvDVXcUED30Czm42t',
 	password: '',
+	useSSL:true,
 	onSuccess: onConnect
 }
 // mqtt.connect(options);
@@ -50,7 +51,7 @@ function switchAsset(i){
 	sendMqtt(newIndex);
 }
 window.addEventListener('load',function(){
-	mqtt=new Paho.MQTT.Client(host,port,'/wss',"clientjs");
+	mqtt=new Paho.MQTT.Client(host,port,"clientjs");
 	mqtt.connect(options)
 	curAsset="ar_tm";
 	var txt = document.getElementById("ar_text");
