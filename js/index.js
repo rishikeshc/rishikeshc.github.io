@@ -2,7 +2,7 @@ var startx,endx = 0
 var curAsset="";
 var host="mqtt.eclipse.org";
 var port = 1883;
-var mqtt=new Paho.MQTT.Client(host,port,"clientjs");
+var mqtt;
 var options={
 	timeout: 3,
 	onSuccess: onConnect
@@ -47,6 +47,8 @@ function switchAsset(i){
 	sendMqtt(newIndex);
 }
 window.addEventListener('load',function(){
+	mqtt=new Paho.MQTT.Client(host,port,"clientjs");
+	mqtt.connect(options)
 	curAsset="ar_tm";
 	var txt = document.getElementById("ar_text");
 	var st = document.getElementById(curAsset);
