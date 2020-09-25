@@ -55,7 +55,7 @@ window.addEventListener('load',function(){
 	mqtt=new Paho.MQTT.Client(host,port,"clientjs");
 	mqtt.connect(options)
 	var msg = new Paho.MQTT.Message(`Check`)
-	msg.destinationName = "AR/iot";
+	mqtt.destinationName = "AR/iot";
 	mqtt.send(msg.toString());
 	curAsset="ar_tm";
 	var txt = document.getElementById("ar_text");
